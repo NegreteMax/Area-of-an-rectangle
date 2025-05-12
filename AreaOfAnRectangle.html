@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Area of the Rectangle</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .hidden{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>What is the Area of the rectangle?</h3>
+        <div class="row">
+            <div>
+                <label for="a">A</label>
+                <input type="text" id="a" name="a" style="width: 100px">
+            </div>
+            <div>
+                <label for="B">B</label>
+                <input type="text" id="B" name="B" style="width: 100px">
+            </div>
+            <div>
+                <label for="c">C</label>
+                <input type="text" id="c" name="c" style="width: 100px">
+            </div>
+            <div>
+                <label for="y2">Y2</label>
+                <input type="text" id="y2" name="y2" style="width: 100px">
+            </div>
+        </div>
+        <button id="calc">Calculate</button>
+        <button id="clear">Clear</button>
+        <p class="hidden"></p>
+    </div>
+    <script>
+        const x1=document.getElementById('x1');
+        const y1=document.getElementById('y1');
+        const x2=document.getElementById('x2');
+        const y2=document.getElementById('y2');
+        const ans=document.querySelector('p');
+        const calculateButton=document.getElementById('calc');
+        const clearButton=document.getElementById('clear');
+        clearButton.addEventListener('click', function(e){
+            x1.value="";
+            y1.value="";
+            x2.value="";
+            y2.value="";
+            ans.textContent="";
+            ans.classList.add("hidden");
+        })
+
+    </script>
+</div>
+</body>
+</html>
